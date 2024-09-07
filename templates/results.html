@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>نتایج جستجو</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo1">
+            <img src="{{ url_for('static', filename='4ByI84-LogoMakr.png') }}" alt="logo-Gostak" class="logo-image">
+            <h1 id="logo-name">Gostak</h1>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="results-container">
+            <h2>پیشنهادات سفر</h2>
+            <ul>
+            {% for result in results %}
+                <li>{{ result }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>کجا سفر بروم ؟</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo1">
+            <img src="{{ url_for('static', filename='4ByI84-LogoMakr.png') }}" alt="logo-Gostak" class="logo-image">
+            <h1 id="logo-name">Gostak</h1>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="first-koj">
+            <img src="{{ url_for('static', filename='_f2662084-00c3-4bc2-9e8e-d66212d1bc1f.jpg') }}" alt="map-iran">
+        </div>
+        <div class="form-container">
+            <form method="POST">
+                <label for="trip-type">نوع سفر:</label>
+                <select id="trip-type" name="trip-type">
+                    <option value="Mazhabi">مذهبی</option>
+                    <option value="Tafrihi">تفریحی</option>
+                    <option value="Tarikhi">تاریخی</option>
+                </select>
+
+                <label for="transport">نوع حمل و نقل:</label>
+                <select id="transport" name="transport">
+                    <option value="Havapeyma">هواپیما</option>
+                    <option value="Otobus">اتوبوس</option>
+                    <option value="KhodroSavari">خودرو سواری</option>
+                </select>
+
+                <label for="origin">مبدا:</label>
+                <select id="origin" name="origin">
+                    <option value="Abadan">آبادان</option>
+                        <option value="Abadeh">آباده</option>
+                        <option value="Arak">اراک</option>
+                        <option value="Ardabil">اردبیل</option>
+                        <option value="Ardakan">اردکان</option>
+                        <option value="Esfahan">اصفهان</option>
+                        <option value="Ahvaz">اهواز</option>
+                        <option value="Bandar Abbas">بندرعباس</option>
+                        <option value="Bandar Anzali">بندرانزلی</option>
+                        <option value="Bojnurd">بجنورد</option>
+                        <option value="Birjand">بیرجند</option>
+                        <option value="Babol">بابل</option>
+                        <option value="Tabriz">تبریز</option>
+                        <option value="Tehran">تهران</option>
+                        <option value="Jiroft">جیرفت</option>
+                        <option value="Kerman">کرمان</option>
+                        <option value="Kermanshah">کرمانشاه</option>
+                        <option value="Kashan">کاشان</option>
+                        <option value="Qazvin">قزوین</option>
+                        <option value="Mashhad">مشهد</option>
+                        <option value="Shiraz">شیراز</option>
+                        <option value="Yazd">یزد</option>
+                        <option value="Qom">قم</option>
+                        <option value="Sanandaj">سنندج</option>
+                        <option value="Sari">ساری</option>
+                        <option value="Hamedan">همدان</option>
+                        <option value="Gorgan">گرگان</option>
+                        <option value="Rasht">رشت</option>
+                        <option value="Zanjan">زنجان</option>
+                        <option value="Urmia">ارومیه</option>
+                        <option value="Qeshm">قشم</option>
+                        <option value="Sabzevar">سبزوار</option>
+                        <option value="Nishapur">نیشابور</option>
+                        <option value="Kazerun">کازرون</option>
+                        <option value="Kish">کیش</option>
+                        <option value="Ilam">ایلام</option>
+                        <option value="Bushehr">بوشهر</option>
+                        <option value="Bam">بم</option>
+                        <option value="Bandar Lengeh">بندرلنگه</option>
+                        <option value="Zabol">زابل</option>
+                        <option value="Karaj">کرج</option>
+                        <option value="Khorramabad">خرم آباد</option>
+                        <option value="Shahr-e Kord">شهرکرد</option>
+                        <option value="Yasuj">یاسوج</option>
+                        <option value="Ramsar">رامسر</option>
+                        <option value="Najafabad">نجف آباد</option>
+                        <option value="Zarand">زرند</option>
+                        <option value="Maku">ماکو</option>
+                        <option value="Dezful">دزفول</option>
+                        <option value="Mahabad">مهاباد</option>
+                        <option value="Gonbad Kavus">گنبدکاووس</option>
+                        <option value="Quchan">گوچان</option>
+                        <option value="Khoy">خوی</option>
+                        <option value="Kashmar">کاشمر</option>
+                        <option value="Lahijan">لاهیجان</option>
+                        <option value="Malayer">ملایر</option>
+                        <option value="Maragheh">مراغه</option>
+                        <option value="Minab">میناب</option>
+                        <option value="Nahavand">نهاوند</option>
+                        <option value="Saveh">ساوه</option>
+                        <option value="Shushtar">شوشتر</option>
+                        <option value="Susa">شوش</option>
+                        <option value="Varamin">ورامین</option>
+                </select>
+
+                <label for="passengers">نفرات:</label>
+                <input type="number" id="passengers" name="passengers" min="1" required>
+
+                <label for="nights">تعداد شب:</label>
+                <input type="number" id="nights" name="nights" min="1" required>
+
+                <label for="budget">بودجه:</label>
+                <input type="number" id="budget" name="budget" required>
+
+                <button type="submit" class="submit-button">کجا سفر بروم؟</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
